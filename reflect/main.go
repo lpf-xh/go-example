@@ -27,6 +27,10 @@ func main() {
 	// 获取 reflect.Type
 	at := av.Type()
 
+	// reflect.Value 转 interface
+	inf := interface{}(av)
+	fmt.Println(inf)
+
 	// 修改字段值
 	// 使用Elem获取指针对应的值，才能修改
 	av.Elem().FieldByName("Y").SetInt(2)
